@@ -13,10 +13,14 @@ import { UserModule } from './lazyModules/user/user.module';
 /* -------------------------- import service based module ----------------- */
 import { GlobalAjaxMethodHandler } from './util/globalAjaxMethodHandler';
 import { AppRoutingModule } from './app-routing.module';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
