@@ -31,7 +31,6 @@ export class AppComponent implements OnInit {
   submitSignupData() {
 
     let url = this._GlobalAjaxMethodHandler.base_path + 'signup';
-    debugger
 
     this._GlobalAjaxMethodHandler.PostRequest(url, this.signupForm.value)
             .subscribe(res =>{

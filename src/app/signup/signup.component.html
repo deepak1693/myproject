@@ -1,5 +1,5 @@
 <div class="container">
-  <form [formGroup] = "signupForm">
+  <form [formGroup] = "signupForm" enctype="multipart/form-data">
   <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12">
       <label>fisrt name</label>
@@ -13,9 +13,14 @@
       <label>password</label>
       <input type="text" formControlName = "password">
     </div>
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <label>profile</label>
+      <input type="file" #myInput id="avatar" (change)="onFileChange($event)" multiple accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf">
+    </div>
+    
   </div>
   <div class="row">
-    <button class="button" (click)="submitSignupData()">Signup</button>
+    <button class="button" (click)="upload()">Signup</button>
   </div>
 </form>
 </div>
